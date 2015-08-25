@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="lucky-kat-mediation" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <name>Lucky Kat SDK</name>
+  <description>Third party SDKs</description>
+  <author>Lucky Kat</author>
+  <license>Lucky Kat</license>
+  <keywords></keywords>
+
+  <engines>
+    <engine name="cordova-android" version=">=4.0.0" />
+    <engine name="cordova-ios" version=">=3.8.0" />
+  </engines>
+  
+  <!-- iOS -->
+  <platform name="ios">
+    <!-- External SDK -->
+    <framework src="src/ios/sdk/AdColony.framework" custom="true"/>
+    <framework src="src/ios/sdk/Chartboost.framework" custom="true"/>
+    <!-- <framework src="src/ios/sdk/GoogleMobileAds.framework" custom="true"/> -->
+    <source-file src="src/ios/sdk/ApplovinSDK/libAppLovinSdk.a" framework="true"/>
+    <header-file src="src/ios/sdk/ApplovinSDK/headers/ALAd.h"/>
+    <header-file src="src/ios/sdk/ApplovinSDK/headers/ALAdDisplayDelegate.h"/>
+    <header-file src="src/ios/sdk/ApplovinSDK/headers/ALAdLoadDelegate.h"/>
+    <header-file src="src/ios/sdk/ApplovinSDK/headers/ALAdRewardDelegate.h"/>
+    <header-file src="src/ios/sdk/ApplovinSDK/headers/ALAdService.h"/>
+    <header-file src="src/ios/sdk/ApplovinSDK/headers/ALAdSize.h"/>
+    <header-file src="src/ios/sdk/ApplovinSDK/headers/ALAdType.h"/>
+    <header-file src="src/ios/sdk/ApplovinSDK/headers/ALAdUpdateDelegate.h"/>
+    <header-file src="src/ios/sdk/ApplovinSDK/headers/ALAdVideoPlaybackDelegate.h"/>
+    <header-file src="src/ios/sdk/ApplovinSDK/headers/ALAdView.h"/>
+    <header-file src="src/ios/sdk/ApplovinSDK/headers/ALErrorCodes.h"/>
+    <header-file src="src/ios/sdk/ApplovinSDK/headers/ALIncentivizedInterstitialAd.h"/>
+    <header-file src="src/ios/sdk/ApplovinSDK/headers/ALInterstitialAd.h"/>
+    <header-file src="src/ios/sdk/ApplovinSDK/headers/ALSdk.h"/>
+    <header-file src="src/ios/sdk/ApplovinSDK/headers/ALSdkSettings.h"/>
+    <header-file src="src/ios/sdk/ApplovinSDK/headers/ALSwiftHeaders.h"/>
+    <header-file src="src/ios/sdk/ApplovinSDK/headers/ALTargetingData.h"/>
+    <resource-file src="src/ios/sdk/UnityAds.bundle" />
+    <framework src="src/ios/sdk/UnityAds.framework" custom="true"/>
+    <!-- External SDK -->
+
+  </platform>
+  <!-- / iOS -->
+
+  <!-- Android -->
+  <platform name="android">
+    <!-- External SDK -->
+    <source-file src="src/android/sdk/unity-ads.jar" target-dir="libs" />
+    <source-file src="src/android/sdk/adcolony.jar" target-dir="libs" />
+    <source-file src="src/android/sdk/armeabi/libImmEndpointWarpJ.so" target-dir="libs/armeabi" />
+    <source-file src="src/android/sdk/chartboost.jar" target-dir="libs" />
+    <source-file src="src/android/sdk/applovin-sdk-5.4.3.jar" target-dir="libs" />
+    <!-- / External SDK -->
+
+  </platform>
+  <!-- / Android -->
+
+</plugin>
